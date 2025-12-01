@@ -1,0 +1,19 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <h2>Articles récents</h2>
+    
+    {% for post in posts %}
+        <div class="post">
+            <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+            <p>{{ post.created_date|date:"d F Y" }}</p>
+            <p class="meta">Catégorie: {{ post.category.name }}</p>
+            {% if post.images %}
+                <img src="{{ post.images.url }}" alt="{{ post.title }}" class="post-image" style="max-width: 50%; height: auto;">
+            {% endif %}
+            <p>{{ post.content|truncatewords:30 }}</p>
+        </div>
+    {% empty %}
+        <p>Aucun article publié pour le moment.</p>
+    {% endfor %}
+{% endblock %}
