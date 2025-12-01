@@ -26,4 +26,4 @@ Il permet aux utilisateurs de consulter une liste d'articles et d'afficher les d
 - Django
 - SQLite (base de données par défaut)
 - HTML, CSS, Bootstrap
-# [![Moreldev237](https://img.shields.io/badge/Moreldev237-red.svg)](https://github.com/Moreldev237)
+# [![Moreldev237](https://img.shields.io/badge/Moreldev237-blue.svg)](https://github.com/Moreldev237)
